@@ -12,6 +12,8 @@ body {
   font-style: normal;
 }
 
+
+
 .main {
   background-color: #1F2937;
   height: 650px;
@@ -178,4 +180,56 @@ input[type="number"]:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#theme-switch{
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+#theme-switch svg{
+  fill: #4ADF86;
+}
+#theme-switch svg:last-child{
+  display: none;
+}
+.lightmode #theme-switch svg:first-child{
+  display: none;
+}
+.lightmode #theme-switch svg:last-child{
+  display: block;
+}
+
+body.lightmode {
+  background-color: #D1FAE5;
+  color: #2B283A;
+}
+
+body.lightmode main {
+  background-color: #ECFDF5;
+}
+
+body.lightmode .count-input label,
+body.lightmode legend,
+body.lightmode .option label{
+  color: #2B283A;
+}
+
+body.lightmode input[type="number"] {
+  background-color: #D1FAE5;
+  color: #2B283A;
+}
+
+body.lightmode .password-place,
+body.lightmode input[type="number"]:hover {
+  background-color: #10B981;
+  color: #fff;
 }

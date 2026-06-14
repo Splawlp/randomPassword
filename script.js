@@ -6,8 +6,10 @@ const passwordCountInput = document.getElementById("password-count");
 const passwordEnteredLength = document.getElementById("password-length");
 const specialCharacters = document.getElementById("special-characters");
 const numberInPassword = document.getElementById("numbers");
+const themeSwitch = document.getElementById('theme-switch');
 
 
+let lightmode = localStorage.getItem('lightmode');
 let passwordLength = 0;
 let countOfPasswords = 0;
 let char_arr = [];
@@ -72,3 +74,20 @@ function createPasswords() {
     createRandomPassword();
   }
 }
+
+const enableLightmode = () => {
+  document.body.classList.add('lightmode')
+  localStorage.setItem('lightmode', 'active')
+}
+
+const disableLightmode = () => {
+  document.body.classList.remove('lightmode')
+  localStorage.setItem('lightmode', null)
+}
+
+if(lightmode === "active") enableLightmode()
+
+themeSwitch.addEventListener("click", () => {
+  lightmode = localStorage.getItem('lightmode')
+  lightmode !== "active" ? enableLightmode() : disableLightmode()
+})
