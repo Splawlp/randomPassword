@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <title>Create a random PASSWORD - FREE</title>
+</head>
+<body>
+  <main class="main">
+    <h1>Generate a<br> <span class="accent-color">random password</span></h1>
+    <p class="title-description">Never use an insecure password again.</p>
+    <fieldset>
+      <legend>Select additional options :</legend>
+
+      <div class="option">
+        <input type="checkbox" id="numbers" name="numbers"/>
+        <label for="numbers">Use <span class="accent-color">numbers</span></label>
+      </div>
+
+      <div class="option">
+        <input type="checkbox" id="special-characters" name="special-characters" />
+        <label for="special-characters">Use <span class="accent-color">special characters</span></label>
+      </div>
+
+      <div class="option">
+        <label for="length">Enter the password <span class="accent-color">length</span></label>
+        <input type="number" id="password-length" value="8" min="8" max="20" placeholder="from 8 to 20...">
+      </div>
+    </fieldset>
+
+    <div class="input-btn-container">
+      <div class="count-input">
+          <label for="count">How many password you wanna generate: </label>
+          <input type="number" id="password-count" value="2" min="2" max="10" placeholder="from 2 to 10...">
+        </div>
+      <button id="create-btn" onclick="createPasswords()">Generate passwords</button>
+    </div>
+    <div class="horizontal-line"></div>
+    <div id="passwords-container">
+    </div>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
