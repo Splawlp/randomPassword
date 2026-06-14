@@ -1,4 +1,4 @@
-# Random Password Generator 🔐
+# [Random Password Generator](https://randomizerforpasswords.netlify.app/) 🔐
 
 A simple and clean web app for generating random, secure passwords. Built with **HTML**, **CSS**, and **Vanilla JavaScript**.
 
